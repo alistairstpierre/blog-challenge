@@ -1,0 +1,10 @@
+<%- include('header'); -%>
+    
+<div>
+    <% blogPosts.forEach(function(post, index){ %>
+        <h1><%= post.title %></h1>
+        <p><%= post.content.slice(0,100) %><a href="post/<%= index %>" class="show-more-link">show more</a></p>
+    <% }); %>
+</div>
+
+<%- include('footer'); -%>
